@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#container {
+  min-height: 150px;
+  border: 1px solid black;
+  padding: 25px;
+}
+</style>
+</head>
+<body>
+
+
+
+    <div id="container">
+        <input id="input" type="text">
+        <br>
+        <button id="btn">Submit</button>
+        <div>
+          <span id="one">1</span>
+          <span id="two">2</span>
+          <span id="three">3</span>
+        </div>
+        <div>
+          <span id="four">4</span>
+          <span id="five">5</span>
+          <span id="six">6</span>
+        </div>
+        <div>
+          <span id="seven">7</span>
+          <span id="eight">8</span>
+          <span id="nine">9</span>
+        </div>
+      </div>
+
+<script>
+var input = document.querySelector("#input");
+
+var button = document.querySelector("#btn");
+
+var one = document.querySelector("#one");
+
+var two = document.querySelector("#two");
+
+function onClickHandler() {
+  var value = input.value
+  if (value == "1") {
+    one.style.backgroundColor = "red";
+    two.style.backgroundColor = "transparent";
+  }
+  else if (value == "2") {
+    one.style.backgroundColor = "transparent";
+    two.style.backgroundColor = "red";
+  }
+}
+
+button.addEventListener('click', onClickHandler);
+</script>
+
+</body>
+</html>
+
